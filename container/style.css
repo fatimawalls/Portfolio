@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f5f9;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 20px;
+}
+header {
+    background-color: #e5f4fb;
+    padding: 60px 20px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 80px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.buttons a {
+    text-decoration: none;
+    background-color: #33cc99;
+    color: white;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.btn-ios {
+    background-color: #4CAF50;
+}
+
+.btn-mac {
+    background-color: #007BFF;
+}
+
+/* Features */
+.features {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.feature {
+    max-width: 300px;
+    text-align: left;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Access Section */
+.access {
+    padding: 60px 20px;
+    background-color: #e5f4fb;
+}
+
+.access h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Workflow Section */
+.workflow {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.workflow h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.workflow-features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.workflow-feature {
+    max-width: 300px;
+    text-align: left;
+}
+
+.workflow-feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.workflow-feature p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+}
+
+footer h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #007BFF;
+    text-decoration: none;
+}
