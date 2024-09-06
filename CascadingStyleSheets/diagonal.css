@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}
+
+/* General Styles for all boxes */
+div {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+/* Specific styles for each box */
+.top-container {
+    background-color: blue;
+    border: 10px solid black;
+    padding: 20px;
+    top: 0;
+    left: 0;
+}
+
+.middle-container {
+    background-color: red;
+    border: 20px solid black;
+    top: 260px;
+    left: 260px;
+}
+
+.bottom-container {
+    background-color: yellow;
+    border: 10px solid black;
+    top: 500px;
+    left: 500px;
+}

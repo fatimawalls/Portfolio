@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    position: relative;
+    height: 100vh;
+}
+
+/* General styles for boxes */
+.box {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Yellow box */
+.yellow-container {
+    background-color: yellow;
+    color: black;
+    top: 0;
+    left: 0;
+}
+
+/* Blue box */
+.blue-container {
+    background-color: blue;
+    top: 200px;
+    left: 200px;
+}
+
+/* Red box */
+.red-container {
+    background-color: red;
+    top: 400px;
+    left: 400px;
+}
