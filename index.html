@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>My first web page</title>
-    <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="./index.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
     <div>
 
     <h1>Fátima Sofía Walls Fernández</h1> 
-    <img height="100px" width="180px" src="./img/self.jpeg" alt="Fáti chiquita"/>
+    <img height="100px" width="1000px" src="./img/self.jpeg" alt="Fáti chiquita"/>
     <p><b>Full-time computer science student</b><br>Ciudad Granja, <em> Zapopan</em></p>
     <blockquote>"Life is a one time offer, use it well"<br>
         --Unknown</blockquote>
@@ -30,18 +30,18 @@
     <h2>Education</h2>
     <ul>
         <li><i>2008-2011</i> <b>Kinder kín</b>
-            <img height="50px" width="50px" src="./img/images.jpg" alt="Logo kinder"/>
+            <img height="100px" width="100px" src="./img/images.jpg" alt="Logo kinder"/>
         </li>
         <li><em>2011-2012</em> <b>Instituto Philadelphia</b>
             <img src="./img/download.jpg" style= "height:70px; width:70px; border:salmon"  alt="Logo PH" </li>
         <li><em>2012-2020</em> <b>Instituto Anahuacalli</b>
-            <img height="60px" width="70px" src="./img/download.png" alt="Logo IA"/>
+            <img height="100px" width="100px" src="./img/download.png" alt="Logo IA"/>
         </li>
         <li><em>2020-2023</em> <b>Preparatoria del Tecnológico de Monterrey</b>
-            <img height="60px" width="80px" src="./img/download-1.png" alt="Logo Tec"/>
+            <img height="100px" width="100px" src="./img/download-1.png" alt="Logo Tec"/>
         </li>
         <li><em>2023</em> <b>Universidad Panamericana</b> 
-            <img height="70px" width="80px" src="./img/download-2.png" alt="Logo UP"/>
+            <img height="100px" width="100px" src="./img/download-2.png" alt="Logo UP"/>
         </li>
     </ul>
     </div>
@@ -147,25 +147,133 @@
             <th>October 2nd</th>
         </tr>
      </tbody>
-     <tfoot>
-        <tr>
-            <th></th>
-            <th></th>
-            <th>2 people</th>
-        </tr>
-     </tfoot>
      <caption>Table of birthdays</caption>
     </table>
     </div>
     <div>
         <h2>Agenda</h2>
         <form>
-            <input type="color"/>
-            <input type="text"/>
-            <input type="file"/>
-            <input type="date"/>
+            <div class="team-section">
+                <h2>Meet the Team</h2>
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <img src="./img/col.jpg" alt="Person 1" style="width:100%">
+                            <div class="container">
+                                <h2>Coleen Hoover</h2>
+                                <p class="title">Writer</p>
+                                <p>Achievements: It ends with us book</p>
+                                <p>Date of Birth: Dec 11, 1979</p>
+                                <p>Date of Death: N/A</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="./img/download-1.jpg" alt="Person 2" style="width:100%">
+                            <div class="container">
+                                <h2>Taylor Swift</h2>
+                                <p class="title">Musician</p>
+                                <p>Achievements: All too well song</p>
+                                <p>Date of Birth: Dec 13, 1879</p>
+                                <p>Date of Death: N/A</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img src="./img/van.jpg" alt="Person 3" style="width:100%">
+                            <div class="container">
+                                <h2>Vincent van Gogh</h2>
+                                <p class="title">Artist</p>
+                                <p>Achievements: Starry ninght painting</p>
+                                <p>Date of Birth: March 30, 1853</p>
+                                <p>Date of Death: July 29, 1890</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </form>
+    </div> <div class="schedule-section">
+        <h2>Weekly Schedule</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Start</th>
+                    <th>End</th>
+                    <th>Description</th>
+                    <th>Place</th>
+                    <th>Type</th>
+                    <th>Notes</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-09-01</td>
+                    <td>09:00</td>
+                    <td>11:00</td>
+                    <td>Meeting</td>
+                    <td>Office</td>
+                    <td>Professional</td>
+                    <td>Discuss project</td>
+                    <td> <img height="70px" width="70px" src="./img/free.png" alt="free"/> Free</td>
+                </tr>
+                <tr>
+                    <td>2024-09-02</td>
+                    <td>13:00</td>
+                    <td>15:00</td>
+                    <td>Lunch</td>
+                    <td>Home</td>
+                    <td>Personal</td>
+                    <td>Family gathering</td>
+                    <td><img height="50px" width="50px" src="./img/busy.png" alt="busy"/> Busy</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+    <div class="schedule-form">
+        <h2>Register Weekly Schedule</h2>
+        <form>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"><br><br>
+    
+            <label for="start">Time Start:</label>
+            <input type="time" id="start" name="start"><br><br>
+    
+            <label for="end">Time End:</label>
+            <input type="time" id="end" name="end"><br><br>
+    
+            <label for="activity">Activity:</label>
+            <input type="text" id="activity" name="activity"><br><br>
+    
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place"><br><br>
+    
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="school">School</option>
+                <option value="personal">Personal</option>
+                <option value="professional">Professional</option>
+                <option value="familiar">Familiar</option>
+                <option value="other">Other</option>
+            </select><br><br>
+    
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes"></textarea><br><br>
+    
+            <label for="flag">Flag:</label>
+            <input type="color" id="flag" name="flag"><br><br>
+    
+            <label for="status">Free/Busy:</label>
+            <input type="checkbox" id="status" name="status"> Busy<br><br>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>    
 </body>
 </html>
 <!--em=italica, strong=bold-->

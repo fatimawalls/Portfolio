@@ -1,0 +1,113 @@
+/* General Style */
+body {
+    background-color: #ffc3d7;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+/* H1 Styles */
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 5.5rem;
+    color: rgb(228, 60, 119);
+    margin: 50px;
+}
+
+/* H2 Styles */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: rgb(228, 60, 119);
+    padding-bottom: 10px;
+}
+
+/* H3 Styles */
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #698B8C;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(228, 60, 119);
+}
+
+/* HR Styles */
+hr {
+    border: none;
+    border-top: 6px dotted #EAF6F6;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 4%;
+}
+
+/* Rounded logos */
+img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background-color: #D48A6D;
+}
+
+table td {
+    background-color: #FFEFE6;
+}
+
+/* Schedule form */
+.schedule-form {
+    border: 2px dotted #D48A6D;
+    background-color: #8d3f96;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.schedule-form input, .schedule-form select, .schedule-form textarea {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #FFFCF9;
+}
+
+/* Team section */
+.team-section {
+    background-color: #FFEFE6;
+}
+
+.team-section .row {
+    display: flex;
+    justify-content: center;
+}
+
+.team-section .column {
+    flex: 33.33%;
+    padding: 10px;
+}
+
+.team-section .card {
+    background-color: #ffd2e1d0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.team-section .container {
+    padding: 20px;
+}

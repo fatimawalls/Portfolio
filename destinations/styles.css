@@ -1,3 +1,9 @@
+/* General Style */
+body {
+    background-color: #ffc3d7;
+    font-family: 'Merriweather', serif;
+}
+
 img{
     width:150px;
     border: solid !important;
