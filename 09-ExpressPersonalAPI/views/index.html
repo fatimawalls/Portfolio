@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Test</title>
+</head>
+<body>
+    <% if (locals.error) { %>
+        <h3><%= locals.error %></h3>
+    <% } %>
+    <% if (locals.greetingMessage) { %>
+        <h2><%= locals.greetingMessage %></h2>
+    <% } %>
+
+    <form action="/greet" method="get">
+        Register:
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <input type="submit" value="go next">
+    </form>
+    
+    <h3>List of Registered Names:</h3>
+    <ul>
+        <% if (locals.names && locals.names.length > 0) { %>
+            <% locals.names.forEach((name, index) => { %>
+                <li>
+                    <a href="/greet/<%= index %>"><%= name %></a>
+                </li>
+            <% }); %>
+        <% } else { %>
+            <li>No names registered yet.</li>
+        <% } %>
+    </ul>
+
+    <h3>TODO List</h3>
+    <form action="/task" method="post">
+        <input type="text" name="task" placeholder="New Task" required>
+        <input type="submit" value="Add Task">
+    </form>
+    <ul>
+        <% if (locals.tasks && locals.tasks.length > 0) { %>
+            <% locals.tasks.forEach((task, index) => { %>
+                <li>
+                    <%= task %> 
+                </li>
+            <% }); %>
+        <% } else { %>
+            <li>No tasks added yet.</li>
+        <% } %>
+    </ul>
+
+    <script>
+        function deleteTask(index) {
+            fetch(`/task/${index}`, {
+                method: 'DELETE',
+            }).then(response => {
+                if (response.ok) {
+                    location.reload(); 
+                }
+            });
+        }
+    </script>
+</body>
+</html>

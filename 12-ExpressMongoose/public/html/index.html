@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongo DB - F1 test</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <img src="../images/StarLion.png" alt="lion brewery" />
+    <h1>Welcome to my F1 DB</h1>
+    
+    <form action="/driver" method="post"> 
+        <h2>Driver information</h2>
+        <input type="text" name="num" id="num" placeholder="Number" />
+        <input type="text" name="code" id="code" placeholder="Code" />
+        <input type="text" name="forename" id="forename" placeholder="First Name" />
+        <input type="text" name="surname" id="surname" placeholder="Last Name" />
+        <br />
+        <label for="dob">Date of birth: </label>
+        <input type="date" name="dob" id="dob" />
+        <label for="url">Biography URL: </label>
+        <input type="url" name="url" id="url" />
+        <br />
+        <label for="nation">Nationality: </label>
+        <select name="nation" id="nation">
+            <% countries.forEach(country => { %>
+                <option value="<%= country.code %>"><%= country.label %></option>
+            <% }) %>
+        </select>
+        
+        <label for="team">Team: </label>
+        <select name="team" id="team">
+            <% teams.forEach(team => { %>
+                <option value="<%= team.name %>"><%= team.name %></option>
+            <% }) %>
+        </select>
+        <p> <input type="submit" value="Add Driver" /> </p>
+    </form>
+
+    <h2>Drivers List</h2>
+<ul>
+    <% drivers.forEach(driver => { %>
+        <li>
+            <span><%= driver.forename %> <%= driver.surname %> - <%= driver.team.name %></span>
+            <form action="/driver/edit/<%= driver._id %>" method="POST" style="display:inline;">
+                <input type="hidden" name="num" value="<%= driver.num %>" />
+                <input type="hidden" name="code" value="<%= driver.code %>" />
+                <input type="hidden" name="forename" value="<%= driver.forename %>" />
+                <input type="hidden" name="surname" value="<%= driver.surname %>" />
+                <input type="hidden" name="dob" value="<%= driver.dob.toISOString().split('T')[0] %>" />
+                <input type="hidden" name="url" value="<%= driver.url %>" />
+                <input type="hidden" name="nation" value="<%= driver.nationality %>" />
+                <input type="hidden" name="team" value="<%= driver.team.name %>" />
+                <button type="submit">Edit</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>
+
+    <button id="toggleList" onclick="toggleList()">Show by Teams</button>
+
+<script>
+    let showDrivers = true;
+
+    function toggleList() {
+        showDrivers = !showDrivers;
+        const list = document.querySelector('ul');
+        list.innerHTML = '';
+
+        if (showDrivers) {
+            drivers.forEach(driver => {
+                const li = document.createElement('li');
+                li.innerHTML = `<span>${driver.forename} ${driver.surname} <button onclick="editDriver('${driver._id}')">Edit</button></span>`;
+                list.appendChild(li);
+            });
+            document.getElementById('toggleList').innerText = 'Show by Teams';
+        } else {
+            // Replace with team data, assuming teams have a name property
+            teams.forEach(team => {
+                const li = document.createElement('li');
+                li.innerText = team.name;
+                list.appendChild(li);
+            });
+            document.getElementById('toggleList').innerText = 'Show by Drivers';
+        }
+    }
+</script>
+
+</body>
+
+</html>
